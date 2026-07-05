@@ -1,4 +1,4 @@
-# Dynamical Systems Explorer
+# Chas Map Visualizer
 
 A Python-based graphical user interface (GUI) for exploring one-dimensional nonlinear dynamical systems using the **Logistic Map** and **Tent Map**. The application provides interactive visualization tools commonly used in chaos theory and nonlinear dynamics, making it suitable for educational and research purposes.
 
@@ -182,11 +182,11 @@ This project is useful for:
 
 ## Author
 
-**Kaveesha**
+**Kaveesha Induwara**
 
 Department of Physics
 
-Project: **Dynamical Systems Explorer – Chaos Visualization Using Logistic and Tent Maps**
+Project: **Computational Physics – Chaos Visualization Using Logistic and Tent Maps**
 
 ---
 
