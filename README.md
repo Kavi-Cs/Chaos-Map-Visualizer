@@ -1,19 +1,19 @@
-# Chaos-Map-Visualizer
+# Dynamical Systems Explorer
 
-A Python GUI application for exploring one-dimensional nonlinear dynamical systems using the **Logistic Map** and **Tent Map**. The application provides several visualization tools commonly used in chaos theory and nonlinear dynamics.
+A Python-based graphical user interface (GUI) for exploring one-dimensional nonlinear dynamical systems using the **Logistic Map** and **Tent Map**. The application provides interactive visualization tools commonly used in chaos theory and nonlinear dynamics, making it suitable for educational and research purposes.
 
 ---
 
 ## Features
 
-- Logistic Map
-- Tent Map
+- Logistic Map simulation
+- Tent Map simulation
 - Time Series Plot
 - Bifurcation Diagram
 - Cobweb Diagram
 - Poincaré Plot (Return Map)
 - Lyapunov Exponent Estimation
-- Simple graphical user interface (Tkinter)
+- User-friendly GUI built with Tkinter
 
 ---
 
@@ -21,55 +21,62 @@ A Python GUI application for exploring one-dimensional nonlinear dynamical syste
 
 ### Logistic Map
 
-\[
-x_{n+1}=rx_n(1-x_n)
-\]
+The logistic map is defined by
 
-where:
+```text
+xₙ₊₁ = r × xₙ × (1 − xₙ)
+```
 
-- \(x_n\) is the state variable
-- \(r\) is the growth parameter
-- \(0 \leq x \leq 1\)
-- \(0 \leq r \leq 4\)
+where
+
+- **xₙ** : State variable
+- **r** : Growth parameter
+- **0 ≤ xₙ ≤ 1**
+- **0 ≤ r ≤ 4**
 
 ---
 
 ### Tent Map
 
-\[
-x_{n+1}=
-\begin{cases}
-rx_n, & x_n < 0.5 \\
-r(1-x_n), & x_n \ge 0.5
-\end{cases}
-\]
+The tent map is defined by
 
-where:
+```text
+           r × xₙ             , if xₙ < 0.5
+xₙ₊₁ =
+           r × (1 − xₙ)       , if xₙ ≥ 0.5
+```
 
-- \(0 \leq r \leq 2\)
+where
+
+- **xₙ** : State variable
+- **r** : Control parameter
+- **0 ≤ xₙ ≤ 1**
+- **0 ≤ r ≤ 2**
 
 ---
 
-## Visualizations
+## Visualization Tools
 
-### 1. Time Series
+### Time Series Plot
 Displays the evolution of the state variable over successive iterations.
 
-### 2. Bifurcation Diagram
-Shows how the long-term behavior changes as the control parameter varies.
+### Bifurcation Diagram
+Illustrates how the long-term behavior changes as the control parameter varies.
 
-### 3. Cobweb Diagram
-Illustrates the iterative process graphically using the map function and the identity line.
+### Cobweb Diagram
+Visualizes the iterative process using the map function and the identity line.
 
-### 4. Poincaré Plot
-Plots successive values \((x_n, x_{n+1})\) to visualize periodic and chaotic behavior.
+### Poincaré Plot
+Displays successive values **(xₙ, xₙ₊₁)** to identify fixed points, periodic orbits, and chaotic behavior.
 
-### 5. Lyapunov Exponent
-Estimates the largest Lyapunov exponent to distinguish stable and chaotic dynamics.
+### Lyapunov Exponent
+Estimates the largest Lyapunov exponent to classify the system dynamics.
 
-- λ < 0 : Stable
-- λ = 0 : Transition
-- λ > 0 : Chaotic
+| Lyapunov Exponent | Interpretation |
+|------------------:|---------------|
+| λ < 0 | Stable system |
+| λ = 0 | Transition (Bifurcation) |
+| λ > 0 | Chaotic system |
 
 ---
 
@@ -80,7 +87,7 @@ Estimates the largest Lyapunov exponent to distinguish stable and chaotic dynami
 - Matplotlib
 - Tkinter (included with most Python installations)
 
-Install dependencies:
+Install the required packages:
 
 ```bash
 pip install numpy matplotlib
@@ -88,15 +95,15 @@ pip install numpy matplotlib
 
 ---
 
-## Running the Program
+## Installation
 
-Clone the repository:
+Clone this repository:
 
 ```bash
 git clone https://github.com/YOUR_USERNAME/Dynamical-Systems-Explorer.git
 ```
 
-Move into the project directory:
+Navigate to the project directory:
 
 ```bash
 cd Dynamical-Systems-Explorer
@@ -112,12 +119,13 @@ python logistic_tent_gui.py
 
 ## Project Structure
 
-```
+```text
 Dynamical-Systems-Explorer/
 │
 ├── logistic_tent_gui.py
 ├── README.md
 ├── requirements.txt
+├── LICENSE
 └── screenshots/
     ├── time_series.png
     ├── bifurcation.png
@@ -128,13 +136,13 @@ Dynamical-Systems-Explorer/
 
 ---
 
-## Example GUI
+## Screenshots
 
-Add screenshots of your application in the **screenshots/** folder.
+Add screenshots of your application to the **screenshots/** directory.
 
-Example:
+Example screenshots:
 
-- Time Series
+- Time Series Plot
 - Bifurcation Diagram
 - Cobweb Diagram
 - Poincaré Plot
@@ -144,13 +152,14 @@ Example:
 
 ## Applications
 
-This project can be used for:
+This project is useful for:
 
 - Chaos Theory
 - Nonlinear Dynamics
 - Mathematical Modeling
-- Undergraduate and Postgraduate Projects
+- Computational Physics
 - Scientific Visualization
+- Undergraduate and Postgraduate Research
 - Educational Demonstrations
 
 ---
@@ -158,23 +167,35 @@ This project can be used for:
 ## Future Improvements
 
 - Animated Cobweb Diagram
-- Lyapunov Spectrum
+- Lyapunov Spectrum vs. Parameter
 - Orbit Diagram
 - Interactive Parameter Slider
-- Data Export (CSV)
-- Save Figures
-- Additional Chaotic Maps (Henon, Ikeda, Sine, Circle)
+- Export Data to CSV
+- Save Figures as PNG/PDF
+- Additional Chaotic Maps
+  - Hénon Map
+  - Ikeda Map
+  - Sine Map
+  - Circle Map
 
 ---
 
 ## Author
 
-**Kaveesha**  
-Department of Physics  
-University Project on Nonlinear Dynamical Systems
+**Kaveesha**
+
+Department of Physics
+
+Project: **Dynamical Systems Explorer – Chaos Visualization Using Logistic and Tent Maps**
 
 ---
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the **MIT License**.
+
+---
+
+## Acknowledgements
+
+This project was developed as an educational tool for studying nonlinear dynamical systems and chaos theory using Python. It demonstrates classical discrete-time maps and standard visualization techniques widely used in mathematics and physics.
